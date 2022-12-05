@@ -16,11 +16,23 @@ let result2 = myMap(['run', 'Forrest'], function (el) {
 console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 *******************************************************************************/
 
-let myMap = function() {
-
+let myMap = function(array, cb) {
+    let res = [];
+    for (let i = 0 ; i < array.length ; i++){
+        let element = array[i];
+        res.push(cb(element));
+    }
+    return res;
 };
 
+let result1 = myMap([100, 25, 81, 64], Math.sqrt);
+console.log(result1);   // [ 10, 5, 9, 8 ]
 
+let result2 = myMap(['run', 'Forrest'], function (el) {
+    return el.toUpperCase() + '!';
+});
+
+console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 
 
 

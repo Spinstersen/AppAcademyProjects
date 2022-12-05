@@ -27,11 +27,35 @@ console.log(result4); // true
 
 *******************************************************************************/
 
-let exactly = function() {
-
+let exactly = function(array,number,cb) {
+    let count = 0;
+    array.forEach(function(element){
+        if (cb(element)){
+            count++;
+        }
+    })
+    return count === number;
 };
 
+let result1 = exactly([18, 5, 32, 7, 100], 3, function (n) {
+    return n % 2 === 0;
+});
+console.log(result1); // true
 
+let result2 = exactly([18, 5, 32, 7, 100], 2, function (n) {
+    return n % 2 === 0;
+});
+console.log(result2); // false
+
+let result3 = exactly(['follow', 'the', 'yellow', 'brick', 'road'], 1, function (str) {
+    return str.includes('x');
+});
+console.log(result3); // false
+
+let result4 = exactly(['follow', 'the', 'yellow', 'brick', 'road'], 0, function (str) {
+    return str.includes('x');
+});
+console.log(result4); // true
 
 
 
