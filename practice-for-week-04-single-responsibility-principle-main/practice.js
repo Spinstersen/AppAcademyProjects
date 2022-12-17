@@ -59,7 +59,7 @@ function cost(recipe){
   // Print the cost of each pie based on the cost of each ingredient
   const costOfPie = recipe.reduce((prev, current) => {
     return prev + current.cost;
-  }, recipe[0].cost);
+  }, 0);
   console.log(`Cost per pie: ${costOfPie}`);
   return costOfPie;
   }
