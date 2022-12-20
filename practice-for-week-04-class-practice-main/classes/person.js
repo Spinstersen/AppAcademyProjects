@@ -19,8 +19,6 @@
 //    each of the `People` instances in the input array.
 
 class Person {
-
-
   constructor(firstName,lastName,age){
     this.firstName = firstName,
     this.lastName = lastName,
