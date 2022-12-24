@@ -4,9 +4,9 @@ const { Player } = require('./player');
 
 
 class Enemy extends Character {
-  constructor(name, description, currentRoom,attackTarget,cooldown = 3000) {
+  constructor(name, description, currentRoom,attackTarget = null,cooldown = 3000) {
     super(name,description,currentRoom),
-    this.attackTarget = null,
+    this.attackTarget = attackTarget,
     this.cooldown = cooldown
   }
 
@@ -16,7 +16,16 @@ class Enemy extends Character {
 
 
   randomMove() {
-    // Fill this in
+    let roomOptions = this.currentRoom.exits;
+    let keys = Object.keys(roomOptions);
+
+    let randomRoom = roomOptions[keys[ keys.length * Math.random() << 0]];
+    this.currentRoom = randomRoom;
+
+    console.log(`The ${this.name} rushed to the ${this.currentRoom.name}!`);
+    this.cooldown += 3000;
+    this.act();
+    
   }
 
   takeSandwich() {
@@ -24,6 +33,7 @@ class Enemy extends Character {
       if (item.name === 'sandwich'){
         this.alert("Enemy have eaten the sandwich !");
         this.items.splice(ind,1);
+        this.rest();
       }
     })
   }
@@ -50,7 +60,7 @@ class Enemy extends Character {
     if (this.attackTarget === null) return null;
 
     this.attackTarget.applyDamage(this.strength);
-    
+    this.cooldown += 3000; 
   
   }
 
@@ -71,20 +81,30 @@ class Enemy extends Character {
 
 
   act() {
-    if (this.health <= 0) {
-      // Dead, do nothing;
+    let randomNum = Math.floor(Math.random() * 5) ;
+
+    if (this.health <= 0 || (this.player && this.player.currentRoom != this.currentRoom)) {
+      // Do nothing
     } else if (this.cooldown > 0) {
       this.rest();
-    } else if (this.attackTarget) 
-    {
+    }
+    else if (this.attackTarget) {
       this.attack();
     }
     else {
-      this.scratchNose();
-      this.rest();
+      if (randomNum > 2) {
+        this.scratchNose();
+      } else if (this.currentRoom.items.length > 0) {
+        this.takeSandwich();
+      } else if (randomNum === 1) {
+        this.attackTarget = this.player;
+        this.act();
+      } else {
+        this.randomMove();
+      }
     }
 
-    // Fill this in
+    
   }
 
 

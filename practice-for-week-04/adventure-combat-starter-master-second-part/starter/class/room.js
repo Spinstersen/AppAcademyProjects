@@ -64,12 +64,11 @@ class Room {
   getEnemyByName(name) {
    
     let enemies = this.getEnemies()
-    enemies.forEach(enemy => {
-      if(enemy.name === name){
-        
-        return enemy;
+    for (let i = 0 ; i < enemies.length ; i++) {
+      if (enemies[i].name === name){
+           return enemies[i];
       }
-    })
+    }
     
 
 }

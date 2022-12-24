@@ -40,9 +40,9 @@ let suffixCipher = function(sentence,object) {
 
     for ( let i = 0 ; i < arr.length ; i++){
         let element = arr[i];
-        if(element.includes(keys[0])){
+        if(element.endsWith(keys[0])){
             newArr.push(cb1(element));
-        } else if (element.includes(keys[1])){
+        } else if (element.endsWith(keys[1])){
             newArr.push(cb2(element));
         } else {
             newArr.push(element);
