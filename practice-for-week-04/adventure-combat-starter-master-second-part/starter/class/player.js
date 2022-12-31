@@ -3,6 +3,7 @@ const {Enemy} = require('./enemy');
 const {Food} = require('./food');
 const { Room } = require('./room');
 
+
 class Player extends Character {
 
   constructor(name, startingRoom) {
@@ -29,7 +30,7 @@ class Player extends Character {
     } else {
       console.log(`${this.name} is carrying:`);
       for (let i = 0 ; i < this.items.length ; i++) {
-        console.log(`  ${this.items[i].name}`);
+        console.log(`${this.items[i].name}`);
       }
     }
   }
@@ -54,6 +55,7 @@ class Player extends Character {
     this.items.forEach((item, index) => {
       if (item.name === itemName) {
           if (item instanceof Food) {
+            this.health += item.healing;
             this.items.splice(index, 1);
           }
       }

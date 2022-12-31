@@ -15,7 +15,7 @@ class Triangle {
              (this.side2 + this.side3 > this.side1);
     };
   
-    validate() { //adds an isValid property
+    validate() { 
       this.isValid = this.hasValidSideLengths()
     }
   
@@ -30,7 +30,7 @@ class Triangle {
       super(side1, side2, side3)    
       this.isValidTriangle = Scalene.validate(side1, side2, side3)
     }
-    static validate (side1, side2, side3) {//validates triangle
+    static validate (side1, side2, side3) {
       return (side1 + side2 > side3) &&
              (side1 + side3 > side2) &&
              (side2 + side3 > side1);
