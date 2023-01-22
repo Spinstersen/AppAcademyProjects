@@ -66,7 +66,7 @@ class HashTable {
 
         if (current.key === key) {
           current.value = value;
-          current = null;
+          break;
         } else {
           if (!current.next) {
             this.data[index] = pair
