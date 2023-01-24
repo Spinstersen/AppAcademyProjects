@@ -204,26 +204,26 @@ function longestSubstr(string){
 // console.log(longestSubstr("bbbbb"));         // => 1, where the longest substring is "b"
 
 function maxSubarr(array){
-  // let maxLength = 0;
-  // let start = 0;
-  // let min = array[0];
-  // let max = array[0];
-  // for (let end = 0; end < array.length; end++) {
-  //   min = Math.min(min, array[end]);
-  //   max = Math.max(max, array[end]);
-  //   if (max - min > 1) {
-  //     start = end;
-  //     min = array[end];
-  //     max = array[end];
-  //   }
-  //   maxLength = Math.max(maxLength, end - start + 1);
-  // }
-  // return maxLength;
-  // didn't work :/
+  let maxLength = 0;
+  let start = 0;
+  let min = array[0];
+  let max = array[0];
+  for (let end = 0; end < array.length; end++) {
+    min = Math.min(min, array[end]);
+    max = Math.max(max, array[end]);
+    if (max - min > 1) {
+      start = end;
+      min = array[end];
+      max = array[end];
+    }
+    maxLength = Math.max(maxLength, end - start + 1);
+  }
+  return maxLength;
+  // I could only make it work for consecutive subArray
 }
 
-// console.log(maxSubarr([1,3,2,2,5,2,3,7]));  // => 5 because the longest subarray is [3,2,2,2,3]
-// console.log(maxSubarr([1,1,1,1,3]));// => 4 because the longest subarray is [1,1,1,1]
+console.log(maxSubarr([1,3,2,2,5,2,3,7]));  // => 3 because the longest subarray is [3,2,2]
+console.log(maxSubarr([1,1,1,1,3]));// => 4 because the longest subarray is [1,1,1,1]
 
 
 
