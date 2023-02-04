@@ -1,0 +1,13 @@
+/* Your code here */
+.mainnavbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+li {
+  padding: 5px;
+  font-size: 10px;
+  font-weight: bold;
+}

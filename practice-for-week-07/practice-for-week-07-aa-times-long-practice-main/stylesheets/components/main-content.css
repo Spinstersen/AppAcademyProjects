@@ -1,0 +1,173 @@
+/* Your code here */
+.main__content {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 1;
+  padding: 20px;
+}
+
+.main__subcontent {
+  display: flex;
+  flex-direction: column;
+}
+
+.description_title {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.description_byline {
+  color: rgb(125, 125, 125);
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.main_content {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 20px;
+}
+
+.video > iframe {
+  width: 95%;
+  height: 95%;
+  object-fit: fill;
+}
+
+.sidebar_article2 > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.bigheader > p {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px;
+  font-style: italic;
+}
+
+.subvideo {
+  font-size: 14px;
+  padding-bottom: 120px;
+  font-weight: bold;
+}
+
+.subcontent2 {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.main__sidebar {
+  display: flex;
+  flex-direction: column;
+  border-left: #bdbdbd solid 2px;
+}
+
+.main_article1 {
+  padding: 10px;
+  border-top: black 1px solid;
+  border-bottom: black 1px solid;
+  border-right: #bababa 1px solid;
+}
+
+.main_article2 {
+  padding: 10px;
+  border-top: black 1px solid;
+  border-bottom: black 1px solid;
+}
+
+.sidebar_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1;
+}
+
+.firstsidebar {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 25% 25% 25% 25%;
+}
+
+.secondsidebar {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.element {
+  border-left: 1.5px rgb(198, 198, 198) solid;
+  border-bottom: 1.5px rgb(198, 198, 198) solid;
+  border-top: 1.5px rgb(198, 198, 198) solid;
+  padding: 12px;
+}
+
+.author {
+  font-weight: bold;
+  font-size: 10px;
+  padding: 2px;
+  color: rgb(125, 125, 125);
+}
+
+.comment {
+  color: rgb(38, 184, 233);
+  font-size: 11px;
+  padding: 5px;
+}
+
+.article ul {
+  list-style-type: disc;
+}
+
+.article li {
+  font-size: 12px;
+  padding-right: 20px;
+}
+
+.invention {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 14px;
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 12px;
+}
+
+.article__title {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.sidebar_article1 {
+  padding: 12px;
+  border-bottom: rgb(198, 198, 198) 1px solid;
+}
+
+.sidebar_article2 {
+  padding: 12px;
+}
+
+@media screen and (max-width: 1200px) {
+  .main__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1;
+  }
+
+  .main__sidebar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .interestbar {
+    display: none;
+  }
+}
