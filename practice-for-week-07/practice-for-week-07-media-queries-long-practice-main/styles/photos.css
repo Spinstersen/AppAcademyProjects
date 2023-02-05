@@ -1,0 +1,108 @@
+.photo-card {
+  background-color: #1d3e81;
+  color: #e8eff0;
+  padding: 0.5rem 2rem 1.5rem 2rem;
+  border-radius: 2rem;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.photo-card a {
+  color: #e8eff0;
+}
+
+.photo-card img {
+  width: 100%;
+}
+
+.photo-card p {
+  text-align: justify;
+}
+
+.photo-card .content {
+  display: block;
+  text-align: center;
+}
+
+/* Your code here */
+
+@media print {
+  .photo-card .content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .photo-card,
+  .photo-card a {
+    text-align: left;
+  }
+  .photo-card {
+    margin: 0;
+    width: 100%;
+    background-color: white;
+    padding: 0;
+  }
+  h2 {
+    text-align: center;
+    margin: auto;
+  }
+  a {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .photo-card .content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .photo-card,
+  .photo-card a {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px) and (orientation: portrait) {
+  .flex-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    break-inside: avoid;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px) and (orientation: landscape) {
+  .photo-card .content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .photo-card,
+  .photo-card a {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  .flex-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    break-inside: avoid;
+  }
+
+  .photo-card .content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .photo-card,
+  .photo-card a {
+    text-align: left;
+  }
+}
