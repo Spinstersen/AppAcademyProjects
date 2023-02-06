@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+body {
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+  padding: 20px;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  justify-content: center;
+  padding: 0.4rem;
+}
+
+.nav-link {
+  display: block;
+  font-size: 0.87 rem;
+  font-weight: 400;
+  color: rgb(45, 99, 224);
+  text-decoration: none;
+  padding: 0.4rem 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.active {
+  border-bottom: 2px solid rgb(44, 93, 134);
+}
+
+.disabled {
+  cursor: not-allowed;
+  color: darkslategray;
+}
+
+.disabled:hover {
+  cursor: not-allowed !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  color: darkslategray !important;
+}
+
+.nav-link:hover {
+  color: rgb(4, 39, 120);
+  font-weight: bold;
+}
+
+button.nav-btn {
+  border: none;
+  background-color: rgb(110, 142, 222);
+  color: rgb(54, 54, 54);
+  border-radius: 2rem;
+  padding: 0.4rem;
+  font-family: "DM Serif Display", serif;
+  font-size: 0.8rem;
+}
+
+h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-family: "DM Serif Display", serif;
+  font-size: 2rem;
+}
+
+h4 {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-family: "DM Serif Display", serif;
+  font-size: 1rem;
+}
+
+h6 {
+  font-family: "DM Serif Display", serif;
+  font-size: 0.75rem;
+}
+
+button {
+  border: rgb(48, 83, 173) 1px solid;
+  background-color: rgb(110, 142, 222);
+  color: white;
+  border-radius: 2rem;
+  padding: 0.7rem;
+  font-family: "DM Serif Display", serif;
+  font-size: 0.8rem;
+}
+
+input.btn-primary {
+  background-color: rgb(212, 212, 212);
+  color: rgb(27, 27, 27);
+  border-radius: 0.2rem;
+  padding: 0.7rem;
+  font-family: "DM Serif Display", serif;
+  font-size: 0.8rem;
+  width: fit-content;
+}
+
+input {
+  background-color: rgb(212, 212, 212);
+  color: rgb(27, 27, 27);
+  border-radius: 0.2rem;
+  padding: 0.7rem;
+  font-family: "DM Serif Display", serif;
+  font-size: 0.8rem;
+  width: 90%;
+}
+
+form {
+  padding: 30px;
+  border: 2px rgb(28, 28, 28) solid;
+  border-radius: 1rem;
+}
+
+.card {
+  padding: 2rem;
+  border: 2px rgb(28, 28, 28) solid;
+  align-self: center;
+  margin: auto;
+  border-radius: 1rem;
+}
+
+.card > img {
+  width: 160px;
+}
+
+.alert {
+  padding: 2rem;
+  border: 2px rgb(207, 38, 38) solid;
+  align-self: center;
+  margin: 3rem;
+  border-radius: 1.3rem;
+  color: rgb(207, 38, 38);
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.form-check {
+  display: flex;
+  justify-content: center;
+}
