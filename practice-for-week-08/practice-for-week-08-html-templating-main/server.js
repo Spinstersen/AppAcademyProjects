@@ -180,6 +180,7 @@ const server = http.createServer((req, res) => {
         let htmlPage = fs.readFileSync("./views/edit-dog.html", "utf-8");
         let resBody = htmlPage.replace(/#{name}/g, dog.name);
         resBody = resBody.replace(/#{age}/g, dog.age);
+        resBody = resBody.replace(/#{dogId}/g, dogId);
         res.statusCode = 200;
         res.setHeader("Content-Type", "text/html");
         res.end(resBody);
