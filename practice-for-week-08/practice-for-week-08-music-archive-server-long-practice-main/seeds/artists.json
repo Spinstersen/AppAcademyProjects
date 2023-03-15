@@ -2,5 +2,9 @@
   "1": {
     "artistId": 1,
     "name": "Red Hot Chili Peppers"
+  },
+  "2": {
+    "artistId": 2,
+    "name": "Black Eyed Peas"
   }
 }
