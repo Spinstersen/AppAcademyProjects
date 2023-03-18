@@ -33,7 +33,9 @@ add.addEventListener("click", async () => {
     // <figcaption>${breed}</figcaption>
     // </figure>
     // `
+    const container = document.querySelector("ul");
     const list = document.querySelector("li");
+    container.appendChild(list);
     list.appendChild(figure);
   } catch (e) {
     console.log(e.message);
@@ -46,8 +48,8 @@ const removeFirst = document.getElementById("remove-first");
 removeFirst.addEventListener("click", () => {
   /*-------------------- Select the first dog card --------------------- */
   // Your code here
-  const dogsList = document.querySelector("ul");
-  const firstDog = dogsList.firstChild;
+  const dogsList = document.querySelector("li");
+  const firstDog = dogsList.firstElementChild;
 
   /*-------------------- Remove the first dog card --------------------- */
   // Your code here
@@ -58,8 +60,8 @@ removeFirst.addEventListener("click", () => {
 const removeLast = document.getElementById("remove-last");
 removeLast.addEventListener("click", () => {
   /*-------------------- Select the last dog card ----------------------- */
-  const dogsList = document.querySelector("ul");
-  const lastDog = dogsList.lastChild;
+  const dogsList = document.querySelector("li");
+  const lastDog = dogsList.lastElementChild;
 
   /*-------------------- Remove the last dog card ----------------------- */
   // Your code here
