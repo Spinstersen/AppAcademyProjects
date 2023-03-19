@@ -19,12 +19,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const input = document.getElementById("list-add");
   theButton.addEventListener(
     "click",
-    (addListItem = addItem =
-      (event) => {
-        const li = document.createElement("li");
-        li.innerText = input.value;
-        list.appendChild(li);
-      })
+    (addItem = (event) => {
+      const li = document.createElement("li");
+      li.innerText = input.value;
+      list.appendChild(li);
+    })
   );
   //---------------Change background color of section to reflect color selected--//
   const colorSelector = document.getElementById("color-select");
@@ -42,7 +41,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     (removeEvents = (event) => {
       redInput.removeEventListener("input", makeRed);
       theButton.removeEventListener("click", addItem);
-      colorSelector.removeEventListener("change", changeColor);
+      colorSelector.removeEventListener("input", changeColor);
     })
   );
 });
