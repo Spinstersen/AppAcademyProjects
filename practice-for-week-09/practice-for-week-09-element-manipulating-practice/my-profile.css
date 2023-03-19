@@ -1,0 +1,14 @@
+#bigTitle {
+  color: deepskyblue;
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.list {
+  border: 2px solid deeppink;
+  margin: auto;
+}
+
+li:hover {
+  color: greenyellow;
+}
