@@ -25,17 +25,17 @@ setSecondsTimeout(function () {
 
 function setSecondsTimeout(cb, delayInSeconds) {
   let time = delayInSeconds * 1000;
-  setTimeout(cb,time);  
+  setTimeout(cb, time);
 }
 const t1 = setSecondsTimeout(function () {
-  console.log('hello');
+  console.log("hello");
 }, 1); // should print 'hello' after 1000 milliseconds
 //console.log(t1);
 
 const t2 = setSecondsTimeout(function () {
-  console.log('world');
+  console.log("world");
 }, 1.4); // should print 'world' after 1400 milliseconds
-  //console.log(t2);
+//console.log(t2);
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = setSecondsTimeout;
